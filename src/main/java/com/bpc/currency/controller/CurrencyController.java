@@ -26,7 +26,7 @@ public class CurrencyController {
     }
 
     @GetMapping ("/app/{date}")
-    public ResponseEntity<List<Rate>> showRatesByDate (@PathVariable(value="date") LocalDate date) {
+    public ResponseEntity<List<Rate>> showRatesByDate (@PathVariable(value="date") LocalDate  date) {
         List<Rate> rates= service.getRatesFromSource(date);
         service.saveRatesToDB(rates);
         return new ResponseEntity<>(rates, HttpStatus.OK);

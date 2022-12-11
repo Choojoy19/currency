@@ -8,7 +8,7 @@ import java.util.List;
 public interface CurrencyService {
 
     void saveRatesToDB (List<Rate> list);
-    List<Rate> getRatesFromSource (LocalDate date);
+    List<Rate> getRatesFromSource (LocalDate  date);
     Rate getRatesFromSource (LocalDate date, int currencyCode);
 
 

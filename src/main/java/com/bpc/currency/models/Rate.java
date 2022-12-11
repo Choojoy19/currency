@@ -1,8 +1,10 @@
 package com.bpc.currency.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+
 
 @Entity
 @Table(name="rates")
@@ -10,68 +12,17 @@ public class Rate  {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int ID;
+    @JsonProperty("Cur_ID")
     private int Cur_ID;
+    @JsonProperty("Date")
     private LocalDate Date;
+    @JsonProperty("Cur_Abbreviation")
     private String Cur_Abbreviation;
+    @JsonProperty("Cur_Scale")
     private int Cur_Scale;
+    @JsonProperty("Cur_Name")
     private String Cur_Name;
+    @JsonProperty("Cur_OfficialRate")
     private double Cur_OfficialRate;
 
-    public Rate(){};
-
-    public Integer getCur_ID() {
-        return Cur_ID;
-    }
-
-    public void setCur_ID(Integer cur_ID) {
-        Cur_ID = cur_ID;
-    }
-
-    public LocalDate getDate() {
-        return Date;
-    }
-
-    public void setDate(LocalDate date) {
-        Date = date;
-    }
-
-    public String getCur_Abbreviation() {
-        return Cur_Abbreviation;
-    }
-
-    public void setCur_Abbreviation(String cur_Abbreviation) {
-        Cur_Abbreviation = cur_Abbreviation;
-    }
-
-    public int getCur_Scale() {
-        return Cur_Scale;
-    }
-
-    public void setCur_Scale(int cur_Scale) {
-        Cur_Scale = cur_Scale;
-    }
-
-    public String getCur_Name() {
-        return Cur_Name;
-    }
-
-    public void setCur_Name(String cur_Name) {
-        Cur_Name = cur_Name;
-    }
-
-    public double getCur_OfficialRate() {
-        return Cur_OfficialRate;
-    }
-
-    public void setCur_OfficialRate(double cur_OfficialRate) {
-        Cur_OfficialRate = cur_OfficialRate;
-    }
-
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
 }
