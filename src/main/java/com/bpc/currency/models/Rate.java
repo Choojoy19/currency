@@ -23,6 +23,17 @@ public class Rate  {
     @JsonProperty("Cur_Name")
     private String Cur_Name;
     @JsonProperty("Cur_OfficialRate")
-    private double Cur_OfficialRate;
+    public double Cur_OfficialRate;
 
+    @Override
+    public String toString() {
+        return "Rate{" +
+                "Cur_ID=" + Cur_ID +
+                ", Date=" + Date +
+                ", Cur_Abbreviation='" + Cur_Abbreviation + '\'' +
+                ", Cur_Scale=" + Cur_Scale +
+                ", Cur_Name='" + Cur_Name + '\'' +
+                ", Cur_OfficialRate=" + Cur_OfficialRate +
+                '}';
+    }
 }
