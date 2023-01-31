@@ -1,11 +1,11 @@
 package com.bpc.currency.models;
 
 
-public class RateRespWithChange {
+public class RateWithChange {
     private Rate rate;
     private String rateChange;
 
-    public RateRespWithChange (Rate rate, String rateChange){
+    public RateWithChange(Rate rate, String rateChange){
         this.rate =rate;
         this.rateChange=rateChange;
     }
